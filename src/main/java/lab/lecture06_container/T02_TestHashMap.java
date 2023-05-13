@@ -3,6 +3,9 @@ package lab.lecture06_container;
 import java.util.HashMap;
 import java.util.UUID;
 
+/**
+ * HashMap中无锁，多线程属于不安全
+ */
 public class T02_TestHashMap {
 	static HashMap<UUID,UUID>m = new HashMap<>();
 	static int count = Constants.COUNT;
@@ -34,21 +37,12 @@ public class T02_TestHashMap {
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	public static void main(String[] args) {
           long start = System.currentTimeMillis();
           Thread[]threads = new Thread[THREAD_COUNT];
           for(int i =0; i < threads.length;i++) {
         	  threads[i] = new MyThread(i*(count/THREAD_COUNT));
-        	  
           }
           
           for(Thread t:threads) {
