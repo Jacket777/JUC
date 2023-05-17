@@ -2,6 +2,7 @@ package com.thread.basic01.c21;
 
 /**
  * 15-7 synchornized代码块修饰Counter类
+ * 与 15-5 代码清单中等价
  */
 public class T04_synchorizedCode {
     private static class Counter{
