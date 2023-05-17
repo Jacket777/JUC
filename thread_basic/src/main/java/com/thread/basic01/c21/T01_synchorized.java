@@ -1,7 +1,7 @@
 package com.thread.basic01.c21;
 
 /**
- * 15-5 多线程访问synchornized包含的对象
+ * 15-5 多线程访问synchornized保护的Counter对象
  */
 public class T01_synchorized {
     private static class Counter{
