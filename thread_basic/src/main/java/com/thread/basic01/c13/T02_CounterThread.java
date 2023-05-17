@@ -3,6 +3,10 @@ package com.thread.basic01.c13;
 /**
  * 15-2 race condition exemple
  * 竞态条件实例
+ * 解决方法：
+ * 1.使用synchronized关键字
+ * 2.使用显示锁
+ * 3.使用原子变量
  */
 public class T02_CounterThread extends Thread{
     private static int counter = 0;
