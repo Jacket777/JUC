@@ -12,7 +12,9 @@ public class T01_WaitThread extends Thread{
         synchronized (this){
             while(!fire){
                 try {
+                    System.out.println("wait fire....");
                     wait();
+                    System.out.println("wait end....");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -29,7 +31,8 @@ public class T01_WaitThread extends Thread{
     public static void main(String[] args) throws InterruptedException {
         T01_WaitThread waitThread = new T01_WaitThread();
         waitThread.start();
-        Thread.sleep(1000);
+
+        Thread.sleep(9000);
         System.out.println("fire");
         waitThread.fire();
     }
