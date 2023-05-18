@@ -61,7 +61,6 @@ public class T02_Producer_Consumer {
                     num++;
                     Thread.sleep((int)(Math.random()*100));
                     // Thread.sleep(3000);
-
                 }
             }catch (InterruptedException e) {
                 e.printStackTrace();
